@@ -10,7 +10,42 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.extends(
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:prettier/recommended",
+  ),
+
+  {
+    rules: {
+      "no-console": ["warn", { allow: ["warn", "error"] }],
+      "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+      "@next/next/no-img-element": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/self-closing-comp": [
+        "error",
+        {
+          component: true,
+          html: true,
+        },
+      ],
+      "import/order": [
+        "error",
+        {
+          groups: [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index",
+          ],
+          alphabetize: { order: "asc", caseInsensitive: true },
+          "newlines-between": "never",
+        },
+      ],
+    },
+  },
 ];
 
 export default eslintConfig;
