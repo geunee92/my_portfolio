@@ -2,11 +2,11 @@ import styled from "@emotion/styled";
 
 export const Section = styled.section`
   max-width: 960px;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
 `;
 
 export const Title = styled.h2`
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 2rem 0 1rem;
   border-bottom: 1px solid var(--text);
@@ -14,7 +14,7 @@ export const Title = styled.h2`
 `;
 
 export const Text = styled.p`
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1rem;
 `;
@@ -43,5 +43,5 @@ export const SkillItem = styled.span`
   background-color: var(--text);
   color: var(--bg);
   border-radius: 6px;
-  font-size: 0.875rem;
+  font-size: 1rem;
 `;

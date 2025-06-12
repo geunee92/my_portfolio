@@ -36,7 +36,6 @@ export default function ProjectSection() {
         modules={[Navigation, Pagination]}
         spaceBetween={32}
         slidesPerView={1.1}
-        navigation
         pagination={{ clickable: true }}
         breakpoints={{
           480: {
@@ -52,9 +51,10 @@ export default function ProjectSection() {
       >
         {mockProjects.map((project) => (
           <SwiperSlide key={project.id}>
+            <ProjectTitle>{project.title}</ProjectTitle>
+
             <SlideWrapper onClick={() => setSelectedProject(project)}>
               <Thumbnail src={project.image} alt={project.title} />
-              <ProjectTitle>{project.title}</ProjectTitle>
             </SlideWrapper>
           </SwiperSlide>
         ))}

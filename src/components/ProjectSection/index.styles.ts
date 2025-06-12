@@ -8,7 +8,7 @@ export const Section = styled.section`
 `;
 
 export const Title = styled.h2`
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
   text-align: center;
@@ -31,7 +31,7 @@ export const SlideWrapper = styled.div`
 
 export const Thumbnail = styled.img`
   width: 100%;
-  height: 300px;
+  height: 400px;
   object-fit: cover;
   transition: transform 0.3s ease;
 

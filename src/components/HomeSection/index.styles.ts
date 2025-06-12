@@ -16,7 +16,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const Heading = styled.h1`
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 800;
 `;
 
@@ -28,7 +28,7 @@ export const Line = styled.div`
 `;
 
 export const Sub = styled.p`
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 400;
 `;
 
