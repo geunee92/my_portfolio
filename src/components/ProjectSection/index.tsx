@@ -1,10 +1,11 @@
 "use client";
-
+import { useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { mockProjects } from "@/mocks/projects";
 import {
   Section,
   Title,
@@ -12,34 +13,29 @@ import {
   Thumbnail,
   ProjectTitle,
 } from "./index.styles";
+import { ProjectModal } from "./ProjectModal";
 
-const mockProjects = [
-  {
-    id: 1,
-    title: "Nba 15달러 라인업",
-    image: "/assets/nba-project.webp",
-  },
-  {
-    id: 2,
-    title: "포트폴리오",
-    image: "/assets/portfolio-project.webp",
-  },
-  {
-    id: 3,
-    title: "love trip",
-    image: "/assets/love-trip-project.webp",
-  },
-];
+export interface Project {
+  id: number;
+  title: string;
+  image: string;
+  description: string;
+  skills: string[];
+  siteUrl: string;
+  githubUrl: string;
+}
 
 export default function ProjectSection() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   return (
     <Section>
-      <Title>나의 프로젝트</Title>
+      <Title>My Project</Title>
 
       <Swiper
         modules={[Navigation, Pagination]}
-        spaceBetween={16}
-        slidesPerView={1.05}
+        spaceBetween={32}
+        slidesPerView={1.1}
         navigation
         pagination={{ clickable: true }}
         breakpoints={{
@@ -56,13 +52,20 @@ export default function ProjectSection() {
       >
         {mockProjects.map((project) => (
           <SwiperSlide key={project.id}>
-            <SlideWrapper>
+            <SlideWrapper onClick={() => setSelectedProject(project)}>
               <Thumbnail src={project.image} alt={project.title} />
               <ProjectTitle>{project.title}</ProjectTitle>
             </SlideWrapper>
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </Section>
   );
 }
