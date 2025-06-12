@@ -1,0 +1,63 @@
+import styled from "@emotion/styled";
+
+export const Section = styled.section`
+  padding: 4rem 1rem;
+  background-color: var(--bg);
+  color: var(--text);
+  max-width: 100%;
+`;
+
+export const Title = styled.h2`
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+`;
+
+export const SlideWrapper = styled.div`
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Thumbnail = styled.img`
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  @media (max-width: 1024px) {
+    height: 260px;
+  }
+
+  @media (max-width: 768px) {
+    height: 200px;
+  }
+`;
+
+export const ProjectTitle = styled.div`
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--bg);
+  color: var(--text);
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+`;
