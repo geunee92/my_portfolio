@@ -8,6 +8,7 @@ export const ModalOverlay = styled.div`
 `;
 
 export const ModalContainer = styled.div`
+  position: relative;
   max-width: 640px;
   width: 90%;
   margin: 5vh auto;
@@ -18,11 +19,16 @@ export const ModalContainer = styled.div`
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 `;
 
-export const ModalImage = styled.img`
+export const ModalImageWrapper = styled.div`
+  padding: 1rem;
   width: 100%;
-  height: 100%;
-  max-height: 500px;
-  object-fit: fill;
+  height: auto;
+  position: relative;
+  aspect-ratio: 16 / 9;
+
+  @media (max-width: 768px) {
+    aspect-ratio: 4 / 3;
+  }
 `;
 
 export const ModalContent = styled.div`
@@ -81,15 +87,4 @@ export const LinkItem = styled.div`
   svg {
     flex-shrink: 0;
   }
-`;
-
-export const CloseButton = styled.button`
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 1.25rem;
-  background: none;
-  border: none;
-  color: var(--text);
-  cursor: pointer;
 `;
