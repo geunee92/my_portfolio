@@ -38,14 +38,6 @@ export const Thumbnail = styled.img`
   &:hover {
     transform: scale(1.03);
   }
-
-  @media (max-width: 1024px) {
-    height: 260px;
-  }
-
-  @media (max-width: 768px) {
-    height: 200px;
-  }
 `;
 
 export const ProjectTitle = styled.div`

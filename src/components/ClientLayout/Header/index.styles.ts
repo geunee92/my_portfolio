@@ -9,6 +9,7 @@ export const Container = styled.header`
   padding: 1rem 2rem;
   background-color: var(--bg);
   border-bottom: 1px solid #e0e0e0;
+  position: relative;
 `;
 
 export const Logo = styled.h1`
@@ -17,9 +18,44 @@ export const Logo = styled.h1`
   color: var(--text);
 `;
 
-export const Menu = styled.nav`
+export const DesktopMenu = styled.nav`
   display: flex;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const MobileMenuButton = styled.button`
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+export const MobileMenu = styled.nav`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  background-color: var(--bg);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  z-index: 10;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
 `;
 
 export const MenuItem = styled(Link, {
