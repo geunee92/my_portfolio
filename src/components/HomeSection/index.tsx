@@ -38,7 +38,7 @@ export default function HomeSection() {
         </Styled.AnimateWord>
       </Styled.Sub>
 
-      <Styled.Button href="/project">More About Me</Styled.Button>
+      <Styled.Button href="/about">More About Me</Styled.Button>
     </Styled.TextWrapper>
   );
 }
