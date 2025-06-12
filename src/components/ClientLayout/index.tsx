@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { GlobalStyles } from "@/styles/globalStyles";
+import Footer from "./Footer";
 import Header from "./Header";
 
 export default function ClientLayout({
@@ -35,6 +36,8 @@ export default function ClientLayout({
       <Header theme={theme} toggleTheme={toggleTheme} />
 
       {children}
+
+      <Footer />
     </>
   );
 }
