@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaGithub, FaLink } from "react-icons/fa";
 import { Project } from "..";
 import * as Styled from "./index.styles";
@@ -10,9 +11,15 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
   return (
     <Styled.ModalOverlay onClick={onClose}>
       <Styled.ModalContainer onClick={(e) => e.stopPropagation()}>
-        <Styled.CloseButton onClick={onClose}>✕</Styled.CloseButton>
-
-        <Styled.ModalImage src={project.image} alt={project.title} />
+        <Styled.ModalImageWrapper>
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+          />
+        </Styled.ModalImageWrapper>
 
         <Styled.ModalContent>
           <Styled.Title>{project.title}</Styled.Title>

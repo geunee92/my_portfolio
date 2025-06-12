@@ -8,7 +8,7 @@ export default function LeftRightLayout({ children }: { children: ReactNode }) {
   return (
     <Styled.Container>
       <Styled.ImageWrapper>
-        <Image src="/assets/hero.webp" alt="Profile" fill />
+        <Image src="/assets/hero.webp" alt="Profile" fill priority />
       </Styled.ImageWrapper>
 
       <Styled.TextWrapper>{children}</Styled.TextWrapper>

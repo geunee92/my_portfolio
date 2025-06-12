@@ -54,7 +54,7 @@ export default function ProjectSection() {
             <ProjectTitle>{project.title}</ProjectTitle>
 
             <SlideWrapper onClick={() => setSelectedProject(project)}>
-              <Thumbnail src={project.image} alt={project.title} />
+              <Thumbnail src={project.image} alt={project.title} fill />
             </SlideWrapper>
           </SwiperSlide>
         ))}

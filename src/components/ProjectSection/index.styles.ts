@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import Image from "next/image";
 
 export const Section = styled.section`
   padding: 4rem 1rem;
@@ -19,9 +20,11 @@ export const Title = styled.h2`
 `;
 
 export const SlideWrapper = styled.div`
+  position: relative;
   width: 100%;
   height: auto;
   border-radius: 12px;
+  height: 40vh;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -29,9 +32,7 @@ export const SlideWrapper = styled.div`
   flex-direction: column;
 `;
 
-export const Thumbnail = styled.img`
-  width: 100%;
-  height: 400px;
+export const Thumbnail = styled(Image)`
   object-fit: cover;
   transition: transform 0.3s ease;
 
