@@ -14,7 +14,7 @@ export const mockProjects = [
       "Firebase",
       "vercel",
     ],
-    siteUrl: "https://nba-blush.vercel.app/",
+    siteUrl: "https://nba-blush.vercel.app",
     githubUrl: "https://github.com/geunee92/nba",
   },
   {
@@ -31,7 +31,7 @@ export const mockProjects = [
       "Firebase",
       "vercel",
     ],
-    siteUrl: "https://kimminseoung.github.io/PortFolio/",
+    siteUrl: "https://my-portfolio-six-mauve-53.vercel.app",
     githubUrl: "https://github.com/kimminseoung/PortFolio",
   },
   {
@@ -41,7 +41,7 @@ export const mockProjects = [
     description:
       "간단한 여행 웹사이트로 구글 로그인 기능과 Firebase 연습을 위해 작업했습니다.",
     skills: ["React", "Vite", "TypeScript", "Emotion", "Firebase", "vercel"],
-    siteUrl: "https://love-trip-nu.vercel.app/",
+    siteUrl: "https://love-trip-nu.vercel.app",
     githubUrl: "https://github.com/geunee92/trip",
   },
   {
@@ -67,7 +67,7 @@ export const mockProjects = [
     image: "/assets/suika-project.webp",
     description: "Matter.js를 사용해서 만든 간단한 수박 게임입니다.",
     skills: ["JavaScript, Matter.js", "GitHub Pages"],
-    siteUrl: "https://geunee92.github.io/my-suika-game/",
+    siteUrl: "https://geunee92.github.io/my-suika-game",
     githubUrl: "https://github.com/geunee92/my-suika-game",
   },
 ];
