@@ -12,7 +12,7 @@ export const Container = styled.section`
 `;
 
 export const ImageWrapper = styled.div`
-  flex: 1.4;
+  flex: 1.3;
   position: relative;
   padding-left: 1rem;
 
@@ -22,14 +22,14 @@ export const ImageWrapper = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  flex: 1.6;
+  flex: 1.7;
   min-width: 0;
   overflow: hidden;
   background-color: var(--bg);
   color: var(--text);
   display: flex;
   flex-direction: column;
-  padding: 4rem;
+  padding: 1rem 2rem;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   height: calc(100vh - 180px);

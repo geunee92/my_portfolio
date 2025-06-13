@@ -8,7 +8,7 @@ export default function AboutSection() {
     <Section>
       <Title>ABOUT ME</Title>
       <Text>
-        안녕하세요. 저는 프론트엔드 개발자 조형근입니다.
+        안녕하세요. 프론트엔드 개발자 조형근입니다.
         <br />
         다양한 문제들을 개발을 통해 해결하고 싶습니다.
       </Text>
