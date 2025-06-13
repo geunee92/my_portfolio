@@ -3,13 +3,14 @@
 
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
 import * as Styled from "./index.styles";
 
 const NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Project", href: "/project" },
-  { label: "Board", href: "/board" },
+  { label: "Comment", href: "/comment" },
 ];
 
 interface HeaderProps {
@@ -33,7 +34,7 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
         ))}
 
         <Styled.ThemeToggle onClick={toggleTheme}>
-          {theme === "light" ? "🌙" : "☀️"}
+          {theme === "light" ? <FaSun size={20} /> : <FaMoon size={20} />}
         </Styled.ThemeToggle>
       </Styled.DesktopMenu>
 

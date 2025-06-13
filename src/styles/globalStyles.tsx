@@ -7,11 +7,13 @@ export function GlobalStyles() {
         :root {
           --bg: #ffffff;
           --text: #000000;
+          --muted: #cccccc;
         }
 
         [data-theme="dark"] {
           --bg: #121212;
           --text: #ffffff;
+          --muted: #444444;
         }
 
         * {
