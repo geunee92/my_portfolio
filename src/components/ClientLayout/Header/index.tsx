@@ -51,7 +51,7 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
           ))}
 
           <Styled.ThemeToggle onClick={toggleTheme}>
-            {theme === "light" ? "🌙" : "☀️"}
+            {theme === "light" ? <FaSun size={20} /> : <FaMoon size={20} />}
           </Styled.ThemeToggle>
         </Styled.MobileMenu>
       )}
