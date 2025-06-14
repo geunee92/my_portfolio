@@ -21,7 +21,7 @@ import SkillIcon from "./SkillIcon";
 export function AboutSkills() {
   return (
     <Container>
-      <SectionTitle>프론트엔드 스킬</SectionTitle>
+      <SectionTitle>SKILL</SectionTitle>
 
       <GroupTitle>Basic</GroupTitle>
       <SkillGroup>
