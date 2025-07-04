@@ -18,6 +18,18 @@ export const TextWrapper = styled.div`
 export const Heading = styled.h1`
   font-size: 4rem;
   font-weight: 800;
+  animation: fadeIn 1s ease-in-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 `;
 
 export const Line = styled.div`
