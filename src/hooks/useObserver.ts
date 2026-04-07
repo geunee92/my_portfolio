@@ -1,5 +1,5 @@
 // hooks/useObserver.ts
-import { RefObject, useEffect } from "react";
+import { RefObject, useEffect, useRef } from "react";
 
 export function useObserver({
   target,
@@ -10,17 +10,23 @@ export function useObserver({
   onIntersect: () => void;
   enabled?: boolean;
 }) {
+  const onIntersectRef = useRef(onIntersect);
+
+  useEffect(() => {
+    onIntersectRef.current = onIntersect;
+  }, [onIntersect]);
+
   useEffect(() => {
     if (!enabled || !target.current) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) onIntersect();
+        if (entry.isIntersecting) onIntersectRef.current();
       },
       { threshold: 1.0 },
     );
 
     observer.observe(target.current);
     return () => observer.disconnect();
-  }, [enabled, target, onIntersect]);
+  }, [enabled, target]);
 }

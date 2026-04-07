@@ -5,6 +5,7 @@ export const ModalOverlay = styled.div`
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  overflow-y: auto;
 `;
 
 export const ModalContainer = styled.div`
@@ -17,6 +18,25 @@ export const ModalContainer = styled.div`
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+`;
+
+export const CloseButton = styled.button`
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
 `;
 
 export const ModalImageWrapper = styled.div`
@@ -55,11 +75,11 @@ export const Skills = styled.ul`
   padding: 0;
 
   li {
-    background-color: #eee;
+    background-color: var(--tag-bg);
     padding: 0.4rem 0.75rem;
     border-radius: 20px;
     font-size: 0.875rem;
-    color: #333;
+    color: var(--tag-text);
   }
 `;
 

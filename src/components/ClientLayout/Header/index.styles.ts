@@ -8,7 +8,7 @@ export const Container = styled.header`
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--bg);
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--border);
   position: relative;
 `;
 
@@ -48,7 +48,7 @@ export const MobileMenu = styled.nav`
   top: 100%;
   right: 1rem;
   background-color: var(--bg);
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1rem;
   z-index: 10;

@@ -17,7 +17,13 @@ export const ImageWrapper = styled.div`
   padding-left: 1rem;
 
   @media (max-width: 768px) {
-    display: none;
+    flex: none;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    padding-left: 0;
   }
 `;
 

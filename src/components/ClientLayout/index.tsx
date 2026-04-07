@@ -1,7 +1,7 @@
 "use client";
 
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
-import { QueryClient, QueryClientProvider } from "react-query";
 import { GlobalStyles } from "@/styles/globalStyles";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -11,7 +11,7 @@ export default function ClientLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const queryClient = new QueryClient();
+  const [queryClient] = useState(() => new QueryClient());
 
   const [theme, setTheme] = useState<"light" | "dark">("light");
 

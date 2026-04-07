@@ -8,12 +8,20 @@ export function GlobalStyles() {
           --bg: #ffffff;
           --text: #000000;
           --muted: #cccccc;
+          --border: #e0e0e0;
+          --sub-text: #666666;
+          --tag-bg: #eeeeee;
+          --tag-text: #333333;
         }
 
         [data-theme="dark"] {
           --bg: #121212;
           --text: #ffffff;
           --muted: #444444;
+          --border: #333333;
+          --sub-text: #aaaaaa;
+          --tag-bg: #2a2a2a;
+          --tag-text: #dddddd;
         }
 
         * {

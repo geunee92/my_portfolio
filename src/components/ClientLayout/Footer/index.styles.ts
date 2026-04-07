@@ -8,7 +8,7 @@ export const Container = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--border);
   height: 40px;
 `;
 

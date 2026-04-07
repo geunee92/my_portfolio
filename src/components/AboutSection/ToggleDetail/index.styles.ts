@@ -13,7 +13,7 @@ export const Detail = styled.div`
   margin-top: 0.5rem;
   padding-left: 1rem;
   font-size: 0.95rem;
-  color: #666;
+  color: var(--sub-text);
   line-height: 1.5;
 
   ul {

@@ -1,7 +1,20 @@
 "use client";
+import { Timestamp } from "firebase/firestore";
 import { useState } from "react";
 import { useComments } from "@/hooks/useComment";
 import * as Styled from "./index.styles";
+
+function formatDate(createdAt: Timestamp | undefined) {
+  if (!createdAt) return "";
+  const date = createdAt.toDate();
+  return date.toLocaleDateString("ko-KR", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
 
 export default function CommentSection() {
   const [name, setName] = useState("");
@@ -42,14 +55,17 @@ export default function CommentSection() {
       <Styled.CommentList>
         {comments.map((c, index) => (
           <Styled.CommentItem key={c.id}>
-            <Styled.CommentName>{c.name}</Styled.CommentName>
+            <Styled.CommentHeader>
+              <Styled.CommentName>{c.name}</Styled.CommentName>
+              <Styled.CommentDate>{formatDate(c.createdAt)}</Styled.CommentDate>
+            </Styled.CommentHeader>
 
             <Styled.CommentText>{c.text}</Styled.CommentText>
 
             {index === comments.length - 1 && (
-              <Styled.lastCommentNotice>
+              <Styled.LastCommentNotice>
                 마지막 댓글입니다
-              </Styled.lastCommentNotice>
+              </Styled.LastCommentNotice>
             )}
           </Styled.CommentItem>
         ))}

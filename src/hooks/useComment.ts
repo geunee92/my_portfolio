@@ -1,5 +1,10 @@
+import {
+  useInfiniteQuery,
+  useMutation,
+  useQueryClient,
+} from "@tanstack/react-query";
+import { QueryDocumentSnapshot } from "firebase/firestore";
 import { useRef } from "react";
-import { useInfiniteQuery, useMutation, useQueryClient } from "react-query";
 import { fetchComments, postComment } from "@/remote/comment";
 import { useObserver } from "./useObserver";
 
@@ -8,13 +13,12 @@ export function useComments() {
   const observerRef = useRef<HTMLDivElement | null>(null);
 
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage } =
-    useInfiniteQuery(
-      ["comments"],
-      ({ pageParam = null }) => fetchComments(pageParam),
-      {
-        getNextPageParam: (lastPage) => lastPage.lastVisible ?? undefined,
-      },
-    );
+    useInfiniteQuery({
+      queryKey: ["comments"],
+      queryFn: ({ pageParam }) => fetchComments(pageParam),
+      initialPageParam: null as QueryDocumentSnapshot | null,
+      getNextPageParam: (lastPage) => lastPage.lastVisible ?? undefined,
+    });
 
   const comments = data?.pages.flatMap((page) => page.comments) ?? [];
 
@@ -35,7 +39,7 @@ export function useComments() {
     observerRef,
     comments,
     postComment: mutation.mutate,
-    isLoading: mutation.isLoading,
+    isLoading: mutation.isPending,
     isFetchingNextPage,
   };
 }

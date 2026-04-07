@@ -41,7 +41,7 @@ export default function AboutSection() {
                   </li>
                   <li>
                     해외운송에 필요한 다양한 서류확장자(pdf, tiff, hwp, ppt)를
-                    업로드하고 미리볼 수 있는 시스템 개발
+                    업로드하고 미리볼 수 있는 시스템 개발123123
                   </li>
                 </ol>
               </li>

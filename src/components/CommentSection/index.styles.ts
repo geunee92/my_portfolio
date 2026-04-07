@@ -21,7 +21,7 @@ export const InputWrapper = styled.div`
 
 export const NameInput = styled.input`
   padding: 0.75rem 1rem;
-  max-width: 20vh;
+  max-width: 200px;
   font-size: 1rem;
   border: 1px solid var(--muted);
   border-radius: 6px;
@@ -33,10 +33,11 @@ export const NameInput = styled.input`
   }
 `;
 
-export const Textarea = styled.input`
+export const Textarea = styled.textarea`
   padding: 1rem;
   resize: none;
   font-size: 1rem;
+  min-height: 100px;
   border: 1px solid var(--muted);
   border-radius: 6px;
   background-color: var(--bg);
@@ -85,9 +86,20 @@ export const CommentItem = styled.li`
   background-color: var(--bg);
 `;
 
+export const CommentHeader = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+`;
+
 export const CommentName = styled.p`
   font-weight: bold;
-  margin-bottom: 0.5rem;
+`;
+
+export const CommentDate = styled.span`
+  font-size: 0.8rem;
+  color: var(--sub-text);
 `;
 
 export const CommentText = styled.p`
@@ -102,10 +114,10 @@ export const LoadingText = styled.div`
   opacity: 0.6;
 `;
 
-export const lastCommentNotice = styled.p`
+export const LastCommentNotice = styled.p`
   margin-top: 8px;
   font-size: 0.875rem;
-  color: #888;
+  color: var(--sub-text);
   text-align: center;
 `;
 

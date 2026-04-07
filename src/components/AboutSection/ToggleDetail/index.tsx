@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import * as Styled from "./index.styles";
 
@@ -19,7 +20,19 @@ export function ToggleDetail({ summary, children }: ToggleDetailProps) {
         {isOpen ? "▲ 닫기" : "▼ 자세히 보기"}
       </Styled.ToggleButton>
 
-      {isOpen && <Styled.Detail>{children}</Styled.Detail>}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            style={{ overflow: "hidden" }}
+          >
+            <Styled.Detail>{children}</Styled.Detail>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

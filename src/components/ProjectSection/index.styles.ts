@@ -22,7 +22,6 @@ export const Title = styled.h2`
 export const SlideWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: auto;
   border-radius: 12px;
   height: 40vh;
   overflow: hidden;
