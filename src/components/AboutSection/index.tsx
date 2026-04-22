@@ -18,7 +18,7 @@ export default function AboutSection() {
 
       <List>
         <ListItem>
-          <ToggleDetail summary={"(주)아몬즈 (2024.12 ~ 현재)"}>
+          <ToggleDetail summary={"(주)아몬즈랩 (2025.07 ~ 현재)"}>
             <ul>
               <li>
                 이커머스 웹 플랫폼 및 어드민 운영
